@@ -5,7 +5,6 @@ const productsDiv = document.querySelector(".productsDiv");
 
 async function getCountries(){
     try{
-        productsDiv.innerHTML = `<i id="loading" class="fa-solid fa-spinner fa-spin"></i>`;
         const response = await fetch(filePath);
         if(!response.ok){
             throw new Error("Veri Alınamadı.");

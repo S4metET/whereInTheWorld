@@ -69,8 +69,7 @@
 .productsDiv .product{
     margin: 0 auto;
     margin-bottom: 40px;
-    width: 275px;
-    height: 336px;
+    width: 320px;
     background: rgba(255, 255, 255, 1);
     border-radius: 5px;
 }
