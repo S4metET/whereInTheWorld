@@ -7,7 +7,6 @@
     background-color: #FAFAFA;
 }
 .container .header{
-    max-width: 1440px;
     width: 375px;
     display: flex;
     padding: 30px 16px;
@@ -105,7 +104,6 @@
 
 @media (width > 768px){
     .container{
-        max-width: 1440px;
     }
     .container .header{
         margin-inline: auto;
@@ -149,9 +147,10 @@
 }
 @media (width > 1200px){
     .container{
-        max-width: 1440px;
+
     }
     .container .search-div{
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
