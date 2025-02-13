@@ -1,11 +1,11 @@
 const filePath = "https://restcountries.com/v3.1/all";
 
 const countries = [];
-const countryContainer = document.querySelector(".countryContainer");
+const productsDiv = document.querySelector(".productsDiv");
 
 async function getCountries(){
     try{
-        countryContainer.innerHTML = `<i id="loading" class="fa-solid fa-spinner fa-spin"></i>`;
+        productsDiv.innerHTML = `<i id="loading" class="fa-solid fa-spinner fa-spin"></i>`;
         const response = await fetch(filePath);
         if(!response.ok){
             throw new Error("Veri Alınamadı.");
@@ -19,10 +19,9 @@ async function getCountries(){
     }
 }
 function renderCountries(){
-    countryContainer.innerHTML="";
+    productsDiv.innerHTML="";
     countries.forEach(country =>{
-        countryContainer.innerHTML += `
-        <div class="products-div">
+        productsDiv.innerHTML += `
             <div class="product">
                 <img src="${country.flags.png}">
                 <div class="product-detail">
@@ -32,7 +31,6 @@ function renderCountries(){
                     <p>Capital: <span>${country.capital}</span></p>
                 </div>
             </div>
-        </div>
         `
     })
 }
